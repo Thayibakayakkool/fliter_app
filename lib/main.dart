@@ -1,4 +1,4 @@
-import 'package:filter_app/filter_page.dart';
+import 'package:filter_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: FilterPage(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
+      ),
+      home: const HomePage(),
     );
   }
 }
